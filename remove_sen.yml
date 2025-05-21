@@ -1,0 +1,14 @@
+- hosts: all
+  gather_facts: no
+  remote_user: ustudy
+  become: true
+  become_method: sudo
+  ignore_unreachable: yes
+
+  tasks:
+
+
+              - name: remove sem files
+                shell: rm /etc/nimble/*.sem
+
+

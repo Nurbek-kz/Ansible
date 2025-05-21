@@ -1,0 +1,14 @@
+- hosts: all
+  gather_facts: no
+  remote_user: ustudy
+  become: true
+  become_method: sudo
+  ignore_unreachable: yes
+
+  tasks:
+
+         - name: stop video record
+           shell: /bin/bash /home/ustudy/sc-ui-app/stop.sh 2>&1 &
+
+
+

@@ -1,0 +1,15 @@
+- hosts: all
+  gather_facts: no
+  remote_user: ustudy
+  become: true
+  become_method: sudo
+  ignore_unreachable: yes
+  
+  tasks:
+
+             - name: remove autostart cronjob
+               cron:
+                 name: auto-sc
+                 state: absent
+
+
