@@ -9,6 +9,6 @@
 
 
               - name: remove sem files
-                shell: rm /etc/nimble/*.sem
+                shell: rm /etc/nimble/start.sem
 
 
