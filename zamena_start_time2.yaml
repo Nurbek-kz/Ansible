@@ -1,0 +1,8 @@
+- hosts: ustudy
+  gather_facts: no
+  become: yes
+  ignore_unreachable: yes
+
+  tasks:
+    - name: start_time_2
+      shell: sed -i 's/07:30:00/00:00:01/g' /home/ustudy/scripts/auto-sc.sh
