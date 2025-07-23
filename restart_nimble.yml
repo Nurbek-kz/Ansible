@@ -5,7 +5,14 @@
   become_method: sudo
   ignore_unreachable: yes
   tasks:
-- name: restart nimble
-  service: 
-         name: nimble 
-         state: restarted
+- name: Restart sshd service
+  service:
+    name: sshd
+    state: restarted
+
+- name: Wait for SSH to be available
+  ansible.builtin.wait_for:
+    port: 22
+    host: "{{ ansible_host }}"
+    search_regex: OpenSSH
+    timeout: 30
