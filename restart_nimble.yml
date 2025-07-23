@@ -5,8 +5,11 @@
   become_method: sudo
   ignore_unreachable: yes
 
-- name: Reload nimble
-  service:
-    name: nimble
-    state: restarted
-  become: true
+roles:
+- handlers
+# Ansible Handler: This will restart the Nginx server
+handlers:
+- name: Restart nimble
+service:
+name: nimble
+state: restarted
