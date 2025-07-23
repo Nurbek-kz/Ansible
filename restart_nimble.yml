@@ -1,0 +1,9 @@
+- hosts: ustudy
+  gather_facts: no
+  become: yes
+  ignore_unreachable: true
+  ignore_errors: true
+
+  tasks:
+   - name: restart nimble
+   service: name=nimble state=restarted
