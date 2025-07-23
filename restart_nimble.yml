@@ -1,9 +1,13 @@
-- hosts: ustudy
+- hosts: all
   gather_facts: no
-  become: yes
-  ignore_unreachable: true
-  ignore_errors: true
+  remote_user: ustudy
+  become: true
+  become_method: sudo
+  ignore_unreachable: yes
 
   tasks:
-   - name: restart nimble
-   service: name=nimble state=restarted
+
+
+
+              - name: restart nimble
+              service: name=nimble state=restarted
