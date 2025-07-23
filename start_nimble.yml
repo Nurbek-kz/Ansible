@@ -1,0 +1,11 @@
+- hosts: all
+  gather_facts: no
+  remote_user: ustudy
+  become: true
+  become_method: sudo
+  ignore_unreachable: yes
+  tasks:
+       - name: Start nimble service
+         service:
+               name: nimble
+               state: start
