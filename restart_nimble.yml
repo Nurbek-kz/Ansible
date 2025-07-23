@@ -11,5 +11,5 @@
 
               - name: restart nimble
               ansible.builtin.service:
-              name:nimble
-              state:restarted
+              name: nimble
+              state: restarted
