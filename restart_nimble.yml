@@ -7,5 +7,5 @@
   tasks:
 - name: restart nimble
   service: 
-  name: "nimble" 
-  state: restarted
+         name: nimble 
+        state: restarted
