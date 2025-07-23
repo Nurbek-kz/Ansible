@@ -8,4 +8,4 @@
 - name: restart nimble
   service: 
          name: nimble 
-        state: restarted
+         state: restarted
