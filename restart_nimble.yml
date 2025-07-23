@@ -4,12 +4,8 @@
   become: true
   become_method: sudo
   ignore_unreachable: yes
-
   tasks:
-
-
-
               - name: restart nimble
-              ansible.builtin.service:
-              name: nimble
-              state: restarted
+               ansible.builtin.service:
+               name: nimble
+               state: restarted
