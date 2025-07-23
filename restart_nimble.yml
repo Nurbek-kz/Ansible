@@ -4,7 +4,7 @@
   become: true
   become_method: sudo
   ignore_unreachable: yes
-  tasks:
+
 - name: Reload nimble
   service:
     name: nimble
