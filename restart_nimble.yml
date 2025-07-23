@@ -5,7 +5,7 @@
   become_method: sudo
   ignore_unreachable: yes
   tasks:
-- name: Restart sshd service
+- name: Restart nimble service
   service:
-    name: sshd
+    name: nimble
     state: restarted
