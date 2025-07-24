@@ -1,9 +1,8 @@
-- hosts: all
+- hosts: uto
   gather_facts: no
-  remote_user: ustudy
-  become: true
-  become_method: sudo
-  ignore_unreachable: yes
+  become: yes
+  ignore_unreachable: true
+  ignore_errors: true
   tasks:
        - name: Restart nimble service
          service:
