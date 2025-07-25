@@ -8,3 +8,9 @@
          service:
                name: nimble
                state: started
+
+  handlers:
+       - name: Start nimble service
+         ansible.builtin.service:
+                  name: nimble
+                  state: started
