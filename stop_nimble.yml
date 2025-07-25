@@ -11,6 +11,6 @@
 handlers:
        - name: Stop nimble service
 
-              ansible.builtin.service:
+              service:
                name: httpd
                state: stopped
