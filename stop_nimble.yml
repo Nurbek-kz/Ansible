@@ -8,9 +8,8 @@
          service:
                name: nimble
                state: stopped
-    handlers:
+  handlers:
        - name: Stop nimble service
-
-              service:
-               name: httpd
+       ansible.builtin.service:
+               name: nimble
                state: stopped
