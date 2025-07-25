@@ -3,13 +3,9 @@
   become: yes
   ignore_unreachable: true
   ignore_errors: true
-  tasks:
-       - name: Stop nimble service
-         service:
-               name: nimble
-               state: stopped
+
   handlers:
        - name: Stop nimble service
-       ansible.builtin.service:
-               name: nimble
-               state: stopped
+         ansible.builtin.service:
+                  name: nimble
+                  state: stopped
